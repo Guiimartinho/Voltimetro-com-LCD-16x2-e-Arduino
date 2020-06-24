@@ -1,18 +1,19 @@
 /**
- * SparkFun Inventor's Kit Project
- * Voltmeter
- * Date: May 3, 2016
+ * Nome: Luiz Guilherme M. S. Ito
+ * Voltmetro
+ * Date: Jun a, 2020
  *
- * NOTE: The voltmeter is only capable of sensing 0 - 5V.
- * License:  Public Domain
+ * NOTE: O Voltómetro só é capaz de medir tensões de 0 - 5V.
+ * Para tensões maiores, utilizar módulos divisores de Tensão para 5V de saída
+ * L
  */
 
 #include <LiquidCrystal_I2C.h>
 
-// Constants
+// Constantes
 int VOLTAGE_PIN = A0;
 
-// Global variables
+// Variáveis Globais
 LiquidCrystal_I2C lcd(0x27,16,2);
 
 // ----- Bits para Caracteres Especiais para Bateria -----
@@ -89,7 +90,7 @@ byte bat6[8] = {
 
 void setup() {
 
-  // Initialize the LCD and clear it
+  // Inicialização do LCD e limpeza
   lcd.begin(16, 2);
   lcd.clear();
 
